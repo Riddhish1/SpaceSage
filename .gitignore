@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+"src/pages/*.h5" 
+"src/pages/*.pkl" 
+"src/pages/*.h5" 
+"src/pages/*.pkl" 
