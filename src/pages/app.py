@@ -101,10 +101,20 @@ async def predict_orbit(request: BertInput):
     # Model Prediction
     predictions = bert_model(inputs)[0].numpy()  # Get logits
     predicted_class = np.argmax(predictions, axis=1)[0]
-
     predicted_orbit = orbit_classes[predicted_class]
 
-    return {"orbit_class": predicted_orbit}
+    # Assigning altitude ranges for each orbit class
+    orbit_altitudes = {
+        "LEO": "160-2,000 km",
+        "MEO": "2,000-35,786 km",
+        "GEO": "35,786 km",
+        "HEO": "Above 35,786 km",
+        "SSO": "600-800 km"
+    }
+    
+    altitude = orbit_altitudes.get(predicted_orbit, "Unknown")
+
+    return {"orbit_class": predicted_orbit, "altitude": altitude}
 
 
 # 🔹 Galaxy Classifier Model Endpoint

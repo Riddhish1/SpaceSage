@@ -37,7 +37,13 @@ const GalaxyInfo = () => {
                 { type: 'Spiral Galaxies', desc: 'Characterized by spiral arms and central bulge' },
                 { type: 'Elliptical Galaxies', desc: 'Smooth, featureless appearance' },
                 { type: 'Lenticular Galaxies', desc: 'Disk without spiral arms' },
-                { type: 'Irregular Galaxies', desc: 'No definite shape or structure' }
+                { type: 'Irregular Galaxies', desc: 'No definite shape or structure' },
+                { type: 'Round Elliptical', desc: 'Nearly circular shape with little elongation' },
+                { type: 'In-between Elliptical', desc: 'Intermediate shape between round and cigar-like' },
+                { type: 'Cigar-shaped Elliptical', desc: 'Highly elongated elliptical structure' },
+                { type: 'Edge-on Spiral', desc: 'Spiral galaxy viewed from the side' },
+                { type: 'Unbarred Spiral', desc: 'Spiral galaxy without a central bar' },
+                { type: 'Barred Spiral', desc: 'Spiral galaxy with a prominent central bar' }
               ].map((galaxy) => (
                 <li key={galaxy.type} className={`p-4 rounded-lg transition-colors duration-300 ${
                   isDark ? 'bg-black/30' : 'bg-white/50'

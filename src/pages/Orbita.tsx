@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Orbita = () => {
   const [description, setDescription] = useState('');
-  const [result, setResult] = useState<{ orbit_class: string } | null>(null);
+  const [result, setResult] = useState<{ orbit_class: string; altitude: string } | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
 
@@ -25,7 +25,7 @@ const Orbita = () => {
       }
 
       const data = await response.json();
-      setResult({ orbit_class: data.orbit_class });
+      setResult({ orbit_class: data.orbit_class, altitude: data.altitude });
     } catch (err) {
       setError('Error fetching prediction. Please try again.');
     } finally {
@@ -93,6 +93,11 @@ const Orbita = () => {
                     Predicted Orbit: {result.orbit_class}
                   </h3>
                   <p className="text-gray-400 text-center">Orbit classification based on description</p>
+
+                  {/* ✅ Display Altitude */}
+                  <h4 className="text-xl font-semibold text-center mt-4">
+                    Altitude: <span className="text-indigo-400">{result.altitude}</span>
+                  </h4>
                 </div>
               </div>
             </motion.div>

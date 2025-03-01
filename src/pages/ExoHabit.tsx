@@ -70,8 +70,8 @@ const ExoHabit = () => {
       if (data.habitability_score !== undefined) {
         const score = data.habitability_score;
         setResult({
-          habitable: score > 0.5,
-          reason: score > 0.5
+          habitable: score > 50,
+          reason: score > 50
             ? "Conditions are within acceptable ranges for potential life"
             : "Extreme conditions make life unlikely",
           percentage: score
