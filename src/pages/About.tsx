@@ -35,7 +35,7 @@ const About = () => {
               and scientific discovery.
             </p>
             <a
-              href="https://github.com/spacesage"
+              href="https://github.com/Riddhish1/SpaceSage"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center px-4 py-2 rounded-lg bg-purple-600 hover:bg-purple-700 transition-colors"
