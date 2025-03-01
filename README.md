@@ -108,7 +108,7 @@ Classification model trained with labeled exoplanet data.
 
 4️⃣ Orbita Analyzer
 Purpose: Predicts the optimal orbit for a satellite based on its intended use.
-Approach: Uses a decision tree model trained on historical satellite deployment data.
+Approach: Uses a decision tree model trained on historical satellite deployment data. Also, BERT for classifying text information to expected orbit type.
 Key Features:
 Input parameters include mission type, altitude, and debris risk.
 Model selects the safest and most efficient orbit.
